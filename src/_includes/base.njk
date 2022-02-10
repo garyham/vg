@@ -28,7 +28,7 @@
                     {% if navLink == "home" %}
                       <a class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900" href="{{ '/' | url }}">{{ navLink | capitalize }}</a>
                     {% else %}
-                      <a class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900" href="{{ navLink | url }}">{{ navLink | capitalize }}</a>
+                      <a class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900" href="{{ ['/', navLink] | join | url }}">{{ navLink | capitalize }}</a>
                     {% endif %}
                   </li>
                 {% endfor %}
