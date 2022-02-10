@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./src/**/*.html', './src/**/*.njk', './src/**/*.md'],
+  content: ['./_site/**/*.html'],
   safelist: [],
   theme: {
     fontFamily: {
