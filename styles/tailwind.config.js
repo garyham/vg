@@ -1,12 +1,10 @@
 module.exports = {
-  content: ['_site/**/*.html'],
+  content: ['./src/**/*.html', './src/**/*.njk', './src/**/*.md'],
   safelist: [],
   theme: {
-    extend: {
-      colors: {
-        change: 'black',
-      },
-    },
+    fontFamily: {
+      sans: ['Poppins', 'ui-sans-serif']
+    }
   },
-  plugins: [],
-}
+  plugins: [require('@tailwindcss/typography')]
+};
