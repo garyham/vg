@@ -11,10 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css"/>
-    <link rel="shortcut icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
-    <link rel="icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
-    <script defer src="/js/alpine.js?v={% version %}"></script>
+    <link rel="stylesheet" href="{{ '/style.css' | url }}"/>
+    <link rel="shortcut icon" href="{{ '/assets/images/favIcon.png' | url }}" type="image/x-icon"/>
+    <link rel="icon" href="{{ '/assets/images/favIcon.png' | url }}" type="image/x-icon"/>
+    <script defer src="{{ '/js/alpine.js?v={% version %}' | url }}"></script>
   </head>
   <body class="mx-auto max-w-7xl">
     {% block navbar %}
@@ -26,9 +26,9 @@
                 {% for navLink in nav.navLinks %}
                   <li class="nav-item">
                     {% if navLink == "home" %}
-                      <a class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900" href="/">{{ navLink | capitalize }}</a>
+                      <a class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900" href="{{ '/' | url }}">{{ navLink | capitalize }}</a>
                     {% else %}
-                      <a class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900" href="/{{ navLink }}">{{ navLink | capitalize }}</a>
+                      <a class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900" href="{{ '/{{ navLink }}' | url }}">{{ navLink | capitalize }}</a>
                     {% endif %}
                   </li>
                 {% endfor %}

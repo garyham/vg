@@ -3,7 +3,7 @@
     "watch-css": "npx tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css --watch",
     "build-css": "npx tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css --minify",
     "start": "cross-env NODE_ENV=development concurrently \"cross-env ELEVENTY_ENV=development eleventy --serve\"  \"npm:watch-*\"",
-    "build": "cross-env NODE_ENV=production concurrently \"cross-env ELEVENTY_ENV=production eleventy\"  \"npm:build-*\""
+    "build": "cross-env NODE_ENV=production concurrently \"cross-env ELEVENTY_ENV=production eleventy --pathprefix 'vg'\"  \"npm:build-*\""
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
