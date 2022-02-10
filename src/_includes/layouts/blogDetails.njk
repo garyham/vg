@@ -11,14 +11,14 @@
               <span>{{ author }}</span>
             </p>
             <h2 class="blog-title">{{ title }}</h2>
-            <img class="feature-image" src="{{ featureImg }}" alt="blog-details-image"/> {{ content | safe }}
+            <img class="feature-image" src="{{ featureImg | url }}" alt="blog-details-image"/> {{ content | safe }}
           </article>
           {% if collections.blogpost %}
             {% set nextPost = collections.blogpost | getNextCollectionItem(page) %}
             {% set previousPost = collections.blogpost | getPreviousCollectionItem(page) %}
             <div class="flex justify-between w-full pt-4 align-middle">
               {% if previousPost %}
-                <a href="{{ previousPost.url }}">
+                <a href="{{ previousPost.url | url }}">
                   <span class="link-area">
                     <span data-text="{{ previousPost.data.title }}">
                       Previous Blog
@@ -27,7 +27,7 @@
                 </a>
               {% endif %}
               {% if nextPost %}
-                <a href="{{ nextPost.url }}">
+                <a href="{{ nextPost.url | url }}">
                   <span class="link-area">
                     <span data-text="{{ nextPost.data.title }}">
                       Next Blog

@@ -57,14 +57,14 @@
             <div class="">
               <div class="">
                 <div class="">
-                  <img class="rounded-full" src="{{ teamMember.img }}" alt="team-member"></div>
+                  <img class="rounded-full" src="{{ teamMember.img | url }}" alt="team-member"></div>
                   <div class="">
                     <h3>{{ teamMember.name }}</h3>
                     <p>{{ teamMember.dig }}</p>
                     <ul class="flex justify-between">
                       {% for social in teamMember.social %}
                         <li>
-                          <a href="/{{ 'social.link' | url }}">
+                          <a href="{{ social.link | url }}">
                             <i class="fa fa-{{ social.icon }}"></i>
                           </a>
                         </li>
