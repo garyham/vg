@@ -1,6 +1,6 @@
 {% extends "base.njk" %}
 {% block content %}
-  <section class="relative flex items-center justify-center bg-center bg-cover h-screen bg-[url('{{ hero.background }}')]">
+  <section class="relative flex items-center justify-center bg-center bg-cover h-screen bg-[url('{{ hero.background | url }}')]">
     {{ content | safe }}
   </section>
 {% endblock %}

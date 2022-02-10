@@ -52,7 +52,7 @@
             </h2>
           </div>
         </div>
-        <div class="grid gap-4 grid-cols-3 grid-rows-2">
+        <div class="grid grid-cols-3 grid-rows-2 gap-4">
           {% for teamMember in team.teamMembers %}
             <div class="">
               <div class="">
@@ -64,7 +64,7 @@
                     <ul class="flex justify-between">
                       {% for social in teamMember.social %}
                         <li>
-                          <a href="/{{ social.link }}">
+                          <a href="/{{ 'social.link' | url }}">
                             <i class="fa fa-{{ social.icon }}"></i>
                           </a>
                         </li>
